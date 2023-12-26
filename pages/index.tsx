@@ -16,7 +16,7 @@ const Home: NextPage = () => {
           name="description"
           content="Created as template for future work"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/tabLogo.png" />
       </Head>
       <Hero heading="Let's go jogging" message="Find your road" />
       <Slider slides={SliderData} />

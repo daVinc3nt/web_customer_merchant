@@ -13,9 +13,9 @@ const Hero = ({ heading, message }: Props) => {
       <div className="p-5 text-white z-[2] mt-[-10rem]">
         <h2 className="text-5xl font-bold">{heading}</h2>
         <p className="py-5 text-xl">{message}</p>
-        <Link href="/#gallery" passHref>
-          <button className="px-8 py-2 border">Here</button>
-        </Link>
+        <a href='/#gallery' className="mt-10 rounded-full text-center bg-gray-200 text-sky-800 font-semibold px-8 py-3 transition-colors duration-300 hover:bg-transparent hover:border-gray-200 hover:border-2 hover:text-white">
+          Let's Race
+        </a>
       </div>
     </div>
   );

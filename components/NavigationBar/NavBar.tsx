@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-
+import { AiFillNotification, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import NotificationIcon from "../Notification/NotifyIcon";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
@@ -35,21 +35,20 @@ const NavBar = () => {
             TDlogistics
           </h1>
         </Link>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
-          <li className="p-4">
-            <Link href="/">Trang chủ</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#gallery">Đơn đặt</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#portfolio">My roads</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#contact">Hỗ trợ</Link>
-          </li>
-        </ul>
-
+        <div style={{ color: `${textColor}` }} className="flex items-center">
+          <ul className="hidden sm:flex">
+            <li className="p-4">
+              <Link href="/">Trang chủ</Link>
+            </li>
+            <li className="p-4">
+              <Link href="/#gallery">Đơn đặt</Link>
+            </li>
+            <li className="p-4">
+              <Link href="/#contact">Hỗ trợ</Link>
+            </li>
+          </ul>
+          <NotificationIcon/>
+        </div>
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
@@ -71,25 +70,25 @@ const NavBar = () => {
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
             >
-              <Link href="/">Home</Link>
+              <Link href="/">Trang chủ</Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
             >
-              <Link href="/#gallery">Gallery</Link>
+              <Link href="/#gallery">Đơn đặt</Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
             >
-              <Link href="/#portfolio">My roads</Link>
+              <Link href="/#portfolio">Lộ trình</Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
             >
-              <Link href="/#contact">Contact</Link>
+              <Link href="/#contact">Hỗ trợ</Link>
             </li>
           </ul>
         </div>
